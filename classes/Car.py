@@ -1,7 +1,9 @@
+from Brand import Brand
+
 class Car:
 
     #Construtor da classe
-    def __init__(self, brand, model: str, year: int, color, name):
+    def __init__(self, brand: Brand, model: str, year: int, color, name):
         self.brand = brand
         self.model = model
         self.year = year

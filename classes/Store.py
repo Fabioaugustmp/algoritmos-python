@@ -1,13 +1,14 @@
 from Car import Car
+from classes.Brand import Brand
 
 def create_car(cars):
     print("\x1b[2J\x1b[1;1H")
-    brand = str(input("Informe a marca do veículo"))
     model = str(input("Informe o modelo do veículo"))
     year = int(input("Informe o ano do veiculo"))
     color = str(input("Informe a cor do veiculo"))
     name = str(input("Informe o nome do veiculo"))
 
+    brand = Brand("VolksWagen", "O carro com rodas")
     car = Car(brand, model, year, color, name)
     cars.append(car)
     print(f"Car {car} added to the list")
@@ -20,7 +21,6 @@ def show_cars(cars):
 
     for car in cars:
         print(car)
-
 
 def start_system():
     cars = []
